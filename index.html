@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+</body>
+<script>
+  fetch("https://api.github.com/repos/jspsych/jspsych/releases").then(
+    function(response){
+      var r = JSON.parse(response.json());
+      var p = r.map(function(x){
+        return x.assets[0].download_count;
+      });
+      var sum = 0;
+      for(var i=0;i<p.length;i++){
+        sum += p[i];
+      }
+      document.querySelector('body').innerHTML(`Total downloads: ${sum}`);      
+    }
+  )
+</script>
+</html>
