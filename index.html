@@ -8,7 +8,7 @@
     function(response){
       return response.json()
     }).then(function(data){
-      var p = r.map(function(x){
+      var p = data.map(function(x){
         return x.assets[0].download_count;
       });
       var sum = 0;
