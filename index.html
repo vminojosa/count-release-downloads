@@ -6,7 +6,8 @@
 <script>
   fetch("https://api.github.com/repos/jspsych/jspsych/releases").then(
     function(response){
-      var r = JSON.parse(response.json());
+      return response.json()
+    }).then(function(data){
       var p = r.map(function(x){
         return x.assets[0].download_count;
       });
@@ -14,8 +15,7 @@
       for(var i=0;i<p.length;i++){
         sum += p[i];
       }
-      document.querySelector('body').innerHTML(`Total downloads: ${sum}`);      
-    }
-  )
+      document.querySelector('body').innerHTML(`Total downloads: ${sum}`);
+    });
 </script>
 </html>
