@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="data-display"></div>
+  </body>
+  <script>
+    async function run() {
+      const package_list = await fetch(
+        "https://registry.npmjs.org/-/v1/search?text=scope:jspsych&size=250"
+      ).then((response) => response.json());
+
+      const packages = package_list.objects.map(x => x.package.name);
+
+      const npm_data = [];
+
+      for (const package of packages) {
+        fetch(`https://api.npmjs.org/downloads/point/last-month/${package}`)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            npm_data.push(data);
+            npm_data.sort((a,b)=>b.downloads - a.downloads);
+            pretty_print_data(npm_data);
+          });
+      }
+
+      console.log(npm_data);
+    }
+
+    function pretty_print_data(npm_data){
+      let html = '<table>';
+      for(const row of npm_data){
+        html += `<tr><td>${row.package}</td><td>${row.downloads}</td></tr>`
+      }
+      html += `</table>`;
+      document.querySelector('#data-display').innerHTML = html;
+
+    }
+
+    run();
+  </script>
+</html>
