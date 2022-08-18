@@ -2,7 +2,7 @@
 <html>
   <head></head>
   <body>
-    <h1>monthly downloads of @jspsych scoped packages</h1>
+    <h1>monthly downloads of @jspsych & @jspsych-contrib scoped packages</h1>
     <div id="data-display"></div>
   </body>
   <script>
@@ -11,7 +11,11 @@
         "https://registry.npmjs.org/-/v1/search?text=scope:jspsych&size=250"
       ).then((response) => response.json());
 
-      const packages = package_list.objects.map(x => x.package.name);
+      const package_list_contrib = await fetch(
+        "https://registry.npmjs.org/-/v1/search?text=scope:jspsych-contrib&size=250"
+      ).then((response) => response.json());
+
+      const packages = package_list.objects.concat(package_list_contrib.objects).map(x => x.package.name);
 
       const npm_data = [];
 
@@ -23,20 +27,20 @@
           .then(function (data) {
             npm_data.push(data);
             npm_data.sort((a,b)=>b.downloads - a.downloads);
-            pretty_print_data(npm_data);
+            pretty_print_data(npm_data, '#data-display');
           });
       }
 
       console.log(npm_data);
     }
 
-    function pretty_print_data(npm_data){
+    function pretty_print_data(npm_data, target){
       let html = '<table>';
       for(const row of npm_data){
         html += `<tr><td>${row.package}</td><td>${row.downloads}</td></tr>`
       }
       html += `</table>`;
-      document.querySelector('#data-display').innerHTML = html;
+      document.querySelector(target).innerHTML = html;
 
     }
 
