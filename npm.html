@@ -8,11 +8,11 @@
   <script>
     async function run() {
       const package_list = await fetch(
-        "https://registry.npmjs.org/-/v1/search?text=scope:jspsych&size=250"
+        "https://api.npms.io/v2/search?q=scope:jspsych"
       ).then((response) => response.json());
 
       const package_list_contrib = await fetch(
-        "https://registry.npmjs.org/-/v1/search?text=scope:jspsych-contrib&size=250"
+        "https://api.npms.io/v2/search?q=scope:jspsych-contrib"
       ).then((response) => response.json());
 
       const packages = package_list.objects.concat(package_list_contrib.objects).map(x => x.package.name);
