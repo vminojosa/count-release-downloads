@@ -15,7 +15,7 @@
         "https://api.npms.io/v2/search?q=scope:jspsych-contrib"
       ).then((response) => response.json());
 
-      const packages = package_list.objects.concat(package_list_contrib.objects).map(x => x.package.name);
+      const packages = package_list.results.concat(package_list_contrib.results).map(x => x.package.name);
 
       packages.push("jspsych");
 
