@@ -1,51 +1,190 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>npm downloads</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f7f9fb;
+        color: #222;
+        margin: 0;
+        padding: 2rem;
+      }
+      h1 {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+      .counts {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.1em;
+      }
+      .counts span {
+        display: inline-block;
+        margin: 0 1em;
+        padding: 0.2em 0.7em;
+        border-radius: 1em;
+      }
+      .count-core { background: #fffde7; color: #bfa600; }
+      .count-jspsych { background: #e0f7fa; color: #006064; }
+      .count-contrib { background: #f3e8ff; color: #6c2eb7; }
+      .count-total { background: #e0e0e0; color: #222; }
+      .collected-date {
+        text-align: center;
+        color: #888;
+        font-size: 0.95em;
+        margin-bottom: 2rem;
+      }
+      table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        min-width: 420px;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      th, td {
+        padding: 0.75rem 1.5rem;
+        text-align: left;
+      }
+      th {
+        background: #22223b;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+      }
+      tr {
+        border-bottom: 1px solid #eaeaea;
+      }
+      tr:last-child {
+        border-bottom: none;
+      }
+      .scope-jspsych {
+        background: #e0f7fa;
+        color: #006064;
+      }
+      .scope-jspsych-contrib {
+        background: #f3e8ff;
+        color: #6c2eb7;
+      }
+      .scope-core {
+        background: #fffde7;
+        color: #bfa600;
+      }
+      tr:hover {
+        background: #f1f1f1;
+      }
+    </style>
+  </head>
   <body>
-    <h1>monthly downloads of @jspsych & @jspsych-contrib scoped packages</h1>
-    <div id="data-display"></div>
+    <h1>Monthly downloads of <span style='color:#006064'>@jspsych</span> & <span style='color:#6c2eb7'>@jspsych-contrib</span> scoped packages</h1>
+    <div class='collected-date'>Data collected: 2025-05-16</div>
+    <div class='counts'>
+      <span class='count-core'>core: 1</span>
+      <span class='count-jspsych'>@jspsych: 63</span>
+      <span class='count-contrib'>@jspsych-contrib: 32</span>
+      <span class='count-total'>total: 96</span>
+    </div>
+    <table>
+      <tr><th>Package</th><th>Downloads (last month)</th></tr>
+      <tr class='scope-core'><td>jspsych</td><td>10346</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-html-keyboard-response</td><td>4726</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-preload</td><td>4665</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-html-button-response</td><td>4602</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-survey-text</td><td>3686</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-fullscreen</td><td>3528</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-call-function</td><td>3175</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-survey-html-form</td><td>3161</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-audio-keyboard-response</td><td>2924</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-survey-multi-choice</td><td>2723</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-audio-button-response</td><td>2686</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-image-button-response</td><td>2644</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-html-slider-response</td><td>2578</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-survey-multi-select</td><td>2420</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-html-multi-response</td><td>2159</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-audio-multi-response</td><td>2105</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-browser-check</td><td>2006</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-external-html</td><td>1913</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-html-swipe-response</td><td>1880</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-image-keyboard-response</td><td>1815</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-video-keyboard-response</td><td>1804</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-corsi-blocks</td><td>1760</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-survey</td><td>1681</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-instructions</td><td>1669</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/test-utils</td><td>1621</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-survey-likert</td><td>911</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-initialize-camera</td><td>506</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/config</td><td>498</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-video-button-response</td><td>495</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-html-audio-response</td><td>472</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-sketchpad</td><td>468</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-initialize-microphone</td><td>460</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-pipe</td><td>418</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/extension-webgazer</td><td>327</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-canvas-keyboard-response</td><td>325</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-webgazer-init-camera</td><td>314</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-webgazer-validate</td><td>311</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-audio-slider-response</td><td>305</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-webgazer-calibrate</td><td>299</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-cloze</td><td>256</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-canvas-button-response</td><td>250</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/extension-record-video</td><td>240</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-mirror-camera</td><td>193</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/extension-mouse-tracking</td><td>183</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-survey-number</td><td>179</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-virtual-chinrest</td><td>171</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-free-sort</td><td>167</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-resize</td><td>163</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-animation</td><td>161</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-image-slider-response</td><td>137</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-canvas-slider-response</td><td>126</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-iat-html</td><td>123</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-categorize-html</td><td>122</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-video-slider-response</td><td>120</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/new-plugin</td><td>117</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-html-keyboard-response-raf</td><td>107</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-visual-search-circle</td><td>99</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-categorize-image</td><td>96</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-categorize-animation</td><td>87</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-survey-slider</td><td>87</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-serial-reaction-time</td><td>82</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-reconstruction</td><td>76</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-html-video-response</td><td>75</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-same-different-html</td><td>74</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/new-timeline</td><td>73</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/new-extension</td><td>65</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-iat-image</td><td>61</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-same-different-image</td><td>61</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-maxdiff</td><td>54</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-rdk</td><td>44</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/plugin-serial-reaction-time-mouse</td><td>37</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-self-paced-reading</td><td>32</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/extension-mediapipe-face-mesh</td><td>27</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-html-choice</td><td>26</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-html-keyboard-slider</td><td>19</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-vsl-animate-occlusion</td><td>19</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-image-click-response</td><td>19</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-rok</td><td>18</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-html-vas-response</td><td>18</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-ios</td><td>18</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-audio-swipe-response</td><td>18</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-video-several-keyboard-responses</td><td>16</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-copying-task</td><td>16</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-nextcloud-filedrop</td><td>15</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-image-array-keyboard-response</td><td>14</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/extension-touchscreen-buttons</td><td>14</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/extension-countdown</td><td>13</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/extension-device-motion</td><td>12</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-gamepad</td><td>12</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-image-multi-response</td><td>12</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-libet-intentional-binding</td><td>12</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/metadata-cli</td><td>11</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-image-swipe-response</td><td>11</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/jspsych-gamepad</td><td>9</td></tr>
+      <tr class='scope-jspsych-contrib'><td>@jspsych-contrib/plugin-vsl-grid-scene</td><td>9</td></tr>
+      <tr class='scope-jspsych'><td>@jspsych/metadata</td><td>7</td></tr>
+    </table>
   </body>
-  <script>
-    async function run() {
-      const package_list = await fetch(
-        "https://api.npms.io/v2/search?q=scope:jspsych&size=250"
-      ).then((response) => response.json());
-
-      const package_list_contrib = await fetch(
-        "https://api.npms.io/v2/search?q=scope:jspsych-contrib&size=250"
-      ).then((response) => response.json());
-
-      const packages = package_list.results.concat(package_list_contrib.results).map(x => x.package.name);
-
-      packages.push("jspsych");
-
-      const npm_data = [];
-
-      for (const package of packages) {
-        fetch(`https://api.npmjs.org/downloads/point/last-month/${package}`)
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (data) {
-            npm_data.push(data);
-            npm_data.sort((a,b)=>b.downloads - a.downloads);
-            pretty_print_data(npm_data, '#data-display');
-          });
-      }
-
-      console.log(npm_data);
-    }
-
-    function pretty_print_data(npm_data, target){
-      let html = '<table>';
-      for(const row of npm_data){
-        html += `<tr><td>${row.package}</td><td>${row.downloads}</td></tr>`
-      }
-      html += `</table>`;
-      document.querySelector(target).innerHTML = html;
-
-    }
-
-    run();
-  </script>
 </html>
