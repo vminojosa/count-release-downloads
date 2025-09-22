@@ -19,5 +19,5 @@ jobs:
     - name: Install Node.js dependencies
       run: npm install
 
-    - name: Run index.js to generate CSV
-      run: node index.js
+    - name: Run scripts/graph-downloads.js to generate CSV
+      run: node scripts/graph-downloads.js
