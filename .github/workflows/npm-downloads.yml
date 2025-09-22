@@ -1,30 +1,23 @@
-name: Update npm downloads webpage
+name: Update npm downloads CSV
 
 on:
-  schedule:
-    - cron: '0 0 * * 0' # every Sunday at midnight UTC
   workflow_dispatch:
 
 jobs:
-  build:
+  update-contributors:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Generate downloads HTML
-        run: node scripts/generate-npm-downloads.js
-      - name: Commit and push changes
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add npm.html
-          git commit -m 'Update npm downloads webpage' || echo 'No changes to commit'
-          git push
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          publish_branch: gh-pages
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install Node.js dependencies
+      run: npm install
+
+    - name: Run index.js to generate CSV
+      run: node index.js
