@@ -21,3 +21,13 @@ jobs:
 
     - name: Run scripts/graph-downloads.js to generate CSV
       run: node scripts/graph-downloads.js
+      
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add .
+        git commit -m 'Update contributors data and README'
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
