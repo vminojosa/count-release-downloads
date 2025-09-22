@@ -38,9 +38,10 @@ async function getDownloadCount(pkg) {
   results.filter(row => row.package.startsWith('@jspsych/')).slice(0, 2);
 
   // Generate csvContent
-  let csvContent = 'Results\n';
+  let csvContent = 'Package, Downloads\n';
   for (let i = 0; i < results.length; i++) {
-    csvContent += `${results[i]}\n`;
+    csvContent += `${results[i].package},${results[i].downloads}\n`;
+    console.log(results[i]);
   }
 
   // write csvConent to csv file
