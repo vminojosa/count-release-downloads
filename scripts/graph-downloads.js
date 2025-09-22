@@ -18,7 +18,7 @@ async function getDownloadCount(pkg) {
   const startDate = new Date(endDate);
   startDate.setFullYear(startDate.getFullYear() - 10);
 
-  const url = `https://npm-stat.com/api/download-counts?package=${pkg}&from=2025-09-01&until=2025-09-10/`;
+  const url = `https://npm-stat.com/api/download-counts?package=${pkg}&from=${startDate}&until=${endDate}/`;
   const res = await fetch(url);
   const data = await res.json();
   return { package: pkg, downloads: data.downloads || 0 };
