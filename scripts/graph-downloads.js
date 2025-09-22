@@ -18,7 +18,7 @@ async function getDownloadCount(pkg) {
   const startDate = new Date(endDate);
   startDate.setFullYear(startDate.getFullYear() - 10);
 
-  const url = `https://npm-stat.com/api/download-counts?package=${pkg}&from=2020-09-01&until=2025-09-01/`;
+  const url = `https://npm-stat.com/api/download-counts?package=${pkg}&from=2025-09-01&until=2025-09-10/`;
   const res = await fetch(url);
   const data = await res.json();
   return { package: pkg, downloads: data.downloads || 0 };
@@ -38,9 +38,9 @@ async function getDownloadCount(pkg) {
   results.filter(row => row.package.startsWith('@jspsych/')).slice(0, 2);
 
   // Generate csvContent
-  let csvContent = 'Month,Contributors\n';
-  for (let i = 0; i < months.length; i++) {
-    csvContent += `${months[i]},${contributorCounts[i]}\n`;
+  let csvContent = 'Results\n';
+  for (let i = 0; i < results.length; i++) {
+    csvContent += `${results[i]}\n`;
   }
 
   // write csvConent to csv file
