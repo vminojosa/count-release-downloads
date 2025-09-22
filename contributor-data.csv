@@ -1,101 +1,101 @@
-Results
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
-[object Object]
+Package, Downloads
+@jspsych/plugin-preload,0
+@jspsych/plugin-call-function,0
+@jspsych/plugin-fullscreen,0
+@jspsych/plugin-browser-check,0
+@jspsych/plugin-survey-html-form,0
+@jspsych/plugin-html-keyboard-response,0
+@jspsych/plugin-survey-text,0
+@jspsych/plugin-html-button-response,0
+@jspsych/plugin-survey-multi-choice,0
+@jspsych/plugin-html-slider-response,0
+@jspsych/plugin-instructions,0
+@jspsych/plugin-survey-multi-select,0
+@jspsych/test-utils,0
+@jspsych/plugin-survey,0
+@jspsych/plugin-external-html,0
+@jspsych/plugin-audio-keyboard-response,0
+@jspsych/plugin-audio-button-response,0
+@jspsych/plugin-image-button-response,0
+@jspsych/plugin-video-keyboard-response,0
+@jspsych/plugin-survey-likert,0
+@jspsych/plugin-image-keyboard-response,0
+@jspsych/plugin-webgazer-validate,0
+@jspsych/plugin-webgazer-calibrate,0
+@jspsych/plugin-audio-slider-response,0
+@jspsych/plugin-webgazer-init-camera,0
+@jspsych/plugin-sketchpad,0
+@jspsych/plugin-image-slider-response,0
+@jspsych/extension-webgazer,0
+@jspsych-contrib/plugin-pipe,0
+@jspsych/extension-mouse-tracking,0
+@jspsych/plugin-video-button-response,0
+@jspsych/plugin-categorize-html,0
+@jspsych/plugin-visual-search-circle,0
+@jspsych/plugin-animation,0
+@jspsych/plugin-virtual-chinrest,0
+@jspsych/plugin-canvas-keyboard-response,0
+@jspsych/plugin-initialize-microphone,0
+@jspsych/plugin-resize,0
+@jspsych/plugin-initialize-camera,0
+@jspsych/extension-record-video,0
+@jspsych/config,0
+@jspsych/plugin-maxdiff,0
+@jspsych/plugin-categorize-image,0
+@jspsych/plugin-serial-reaction-time,0
+@jspsych/plugin-html-audio-response,0
+@jspsych/plugin-free-sort,0
+@jspsych/plugin-iat-html,0
+@jspsych/plugin-canvas-button-response,0
+@jspsych/plugin-video-slider-response,0
+@jspsych/plugin-cloze,0
+@jspsych/plugin-serial-reaction-time-mouse,0
+@jspsych/plugin-iat-image,0
+@jspsych/plugin-categorize-animation,0
+@jspsych/plugin-canvas-slider-response,0
+@jspsych-contrib/plugin-self-paced-reading,0
+@jspsych/plugin-mirror-camera,0
+@jspsych/plugin-html-video-response,0
+@jspsych/plugin-same-different-image,0
+@jspsych/plugin-reconstruction,0
+@jspsych/plugin-same-different-html,0
+@jspsych/new-plugin,0
+@jspsych/new-timeline,0
+@jspsych-contrib/plugin-corsi-blocks,0
+@jspsych-contrib/plugin-html-swipe-response,0
+@jspsych-contrib/plugin-audio-multi-response,0
+@jspsych-contrib/plugin-html-multi-response,0
+@jspsych/new-extension,0
+@jspsych-contrib/extension-mediapipe-face-mesh,0
+@jspsych/metadata,0
+@jspsych-contrib/extension-device-motion,0
+@jspsych-contrib/plugin-gamepad,0
+@jspsych-contrib/plugin-rdk,0
+@jspsych-contrib/plugin-video-several-keyboard-responses,0
+@jspsych-contrib/plugin-rok,0
+@jspsych-contrib/plugin-survey-slider,0
+@jspsych-contrib/plugin-columbia-card-task,0
+@jspsych-contrib/plugin-spatial-nback,0
+@jspsych-contrib/extension-touchscreen-buttons,0
+@jspsych-contrib/plugin-html-choice,0
+@jspsych-contrib/plugin-html-vas-response,0
+@jspsych-contrib/plugin-ios,0
+@jspsych-contrib/plugin-libet-intentional-binding,0
+@jspsych-contrib/plugin-slide-to-continue,0
+@jspsych-contrib/plugin-survey-number,0
+@jspsych-contrib/plugin-vsl-grid-scene,0
+@jspsych-contrib/plugin-copying-task,0
+@jspsych-contrib/plugin-html-keyboard-slider,0
+@jspsych-contrib/plugin-html-keyboard-response-raf,0
+@jspsych-contrib/plugin-image-swipe-response,0
+@jspsych-contrib/plugin-audio-swipe-response,0
+@jspsych/metadata-cli,0
+@jspsych-contrib/plugin-vsl-animate-occlusion,0
+@jspsych-contrib/plugin-image-multi-response,0
+@jspsych-contrib/plugin-survey-vas,0
+@jspsych-contrib/plugin-image-array-keyboard-response,0
+@jspsych-contrib/plugin-nextcloud-filedrop,0
+@jspsych-contrib/plugin-image-click-response,0
+@jspsych-contrib/extension-countdown,0
+@jspsych-contrib/jspsych-gamepad,0
+jspsych,0
