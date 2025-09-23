@@ -8,8 +8,8 @@ Package, Downloads
 @jspsych/plugin-html-keyboard-response,0
 @jspsych/plugin-html-slider-response,0
 @jspsych/plugin-html-button-response,0
-@jspsych/plugin-survey-multi-select,0
 @jspsych/plugin-survey,0
+@jspsych/plugin-survey-multi-select,0
 @jspsych/plugin-instructions,0
 @jspsych/plugin-survey-multi-choice,0
 @jspsych/test-utils,0
