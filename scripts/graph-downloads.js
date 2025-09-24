@@ -29,7 +29,7 @@ async function getRollingDownloads(pkg) {
     const periodEnd = new Date(startDate);
     periodEnd.setMonth(periodEnd.getMonth() + 1);
 
-    const downloadCount = getDownloadCount(pkg,
+    const downloadCount = await getDownloadCount(pkg,
         startDate.toISOString().slice(0, 10), 
         periodEnd.toISOString().slice(0, 10));
     
@@ -55,7 +55,10 @@ async function getDownloadCount(pkg, startDate, endDate) {
   const url = `https://npm-stat.com/api/download-counts?package=${pkg}&from=${startDate}&until=${endDate}/`;
   const res = await fetch(url);
   const data = await res.json();
-  return { package: pkg, downloads: data.downloads || 0 };
+
+  const downloads = Object.values(obj[`${pkg}`]).reduce((a, b) => a + b, 0)
+
+  return { package: pkg, downloads: downloads || 0 };
 }
 
 (async () => {
@@ -74,7 +77,6 @@ async function getDownloadCount(pkg, startDate, endDate) {
   topPackages.push(latest.filter(row => row.package.startsWith('@jspsych/')).slice(0, 2).map(row => row.package));
   topPackages.push(latest.filter(row => row.package.startsWith('@jspsych-contrib')).slice(0, 2).map(row => row.package));
   topPackages = topPackages.flat();
-  console.log(topPackages);
 
   // Fetch download counts in parallel for speed
   const results = await Promise.all(
