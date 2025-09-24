@@ -27,7 +27,7 @@ async function getRollingDownloads(pkg) {
 
   while (startDate <= oneYearAgo) {
     const periodEnd = new Date(startDate);
-    periodEnd.setFullYear(periodEnd.getFullYear() + 1);
+    periodEnd.setMonth(periodEnd.getMonth() + 1);
 
     const downloadCount = getDownloadCount(pkg,
         startDate.toISOString().slice(0, 10), 
