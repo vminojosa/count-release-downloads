@@ -56,7 +56,7 @@ async function getDownloadCount(pkg, startDate, endDate) {
   const res = await fetch(url);
   const data = await res.json();
 
-  const downloads = Object.values(obj[`${pkg}`]).reduce((a, b) => a + b, 0)
+  const downloads = obj => Object.values(obj[`${pkg}`]).reduce((a, b) => a + b, 0)
 
   return { package: pkg, downloads: downloads || 0 };
 }
