@@ -46,17 +46,17 @@ async function getRollingDownloads(pkg) {
   }
 
   // write csvConent to csv file
-  const csvPath = path.join(`csv/${pkg.replace(/^(@jspsych\/|@jspsych-contrib\/)/,"")}-data.csv`);
+  const csvPath = path.join(`csv_tests/${pkg.replace(/^(@jspsych\/|@jspsych-contrib\/)/,"")}-data.csv`);
   fs.writeFileSync(csvPath, csvContent);
   console.log('CSV file saved to', csvPath);;
 }
 
 async function getDownloadCount(pkg, startDate, endDate) {
-  const url = `https://npm-stat.com/api/download-counts?package=${pkg}&from=${startDate}&until=${endDate}/`;
+  const url = `https://npm-stat.com/api/download-counts?package=${pkg}&from=${startDate}&until=${endDate}`;
   const res = await fetch(url);
   const data = await res.json();
 
-  const downloads = obj => Object.values(obj[`${pkg}`]).reduce((a, b) => a + b, 0)
+  const downloads = Object.values(data[`${pkg}`]).reduce((a, b) => a + b, 0);
 
   return { package: pkg, downloads: downloads || 0 };
 }
@@ -77,6 +77,7 @@ async function getDownloadCount(pkg, startDate, endDate) {
   topPackages.push(latest.filter(row => row.package.startsWith('@jspsych/')).slice(0, 2).map(row => row.package));
   topPackages.push(latest.filter(row => row.package.startsWith('@jspsych-contrib')).slice(0, 2).map(row => row.package));
   topPackages = topPackages.flat();
+  console.log('Top packages:', topPackages);
 
   // Fetch download counts in parallel for speed
   const results = await Promise.all(
