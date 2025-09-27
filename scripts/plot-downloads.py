@@ -5,13 +5,13 @@ import os
 
 def readyData():
     # Load the CSV data
-    filenames = [f for f in os.listdir("../csv_tests")]
+    filenames = [f for f in os.listdir("../csv")]
 
     DFs = []
 
     # Convert the 'Month' column to datetime
     for file in filenames:
-        DF = pd.read_csv(f'../csv_tests/{file}')
+        DF = pd.read_csv(f'../csv/{file}')
         DF['Month'] = pd.to_datetime(DF['Month'], format='%Y-%m')
         DF['Package']=file
         DFs.append(DF)
@@ -40,6 +40,6 @@ def exportGraph(data):
             axis_ticks_length=5,
             axis_ticks=element_line(color='white'))
     )
-    return plot.save(f'../plots_tests/downloads_past_six_months.png')
+    return plot.save(f'../plots/downloads_past_six_months.png')
 
 exportGraph(readyData())
