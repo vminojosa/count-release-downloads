@@ -1,3 +1,11 @@
 node_modules
 .DS_Store
+
+#ignore exports for testing
 csv_tests
+plots_tests
+
+#ignore python testing
+.venv
+*.ipynb
+requirements.txt

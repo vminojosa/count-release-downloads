@@ -40,13 +40,13 @@ async function getRollingDownloads(pkg) {
   }
 
   // Generate csvContent
-  let csvContent = 'Month, Downloads\n';
+  let csvContent = 'Month,Downloads\n';
   for (let i = 0; i < months.length; i++) {
     csvContent += `${months[i]},${pkgDownloads[i]}\n`;
   }
 
   // write csvConent to csv file
-  const csvPath = path.join(`csv/${pkg.replace(/^(@jspsych\/|@jspsych-contrib\/)/,"")}-data.csv`);
+  const csvPath = path.join(`csv_tests/${pkg.replace(/^(@jspsych\/|@jspsych-contrib\/)/,"")}-data.csv`);
   fs.writeFileSync(csvPath, csvContent);
   console.log('CSV file saved to', csvPath);;
 }
