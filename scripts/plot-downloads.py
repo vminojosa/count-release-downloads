@@ -11,7 +11,7 @@ def readyData():
 
     # Convert the 'Month' column to datetime
     for file in filenames:
-        DF = pd.read_csv(f'../csv/{file}')
+        DF = pd.read_csv(f'csv/{file}')
         DF['Month'] = pd.to_datetime(DF['Month'], format='%Y-%m')
         DF['Package']=file
         DFs.append(DF)
@@ -40,6 +40,6 @@ def exportGraph(data):
             axis_ticks_length=5,
             axis_ticks=element_line(color='white'))
     )
-    return plot.save(f'../plots/downloads_past_six_months.png')
+    return plot.save(f'downloads_past_six_months.png')
 
 exportGraph(readyData())
