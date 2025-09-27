@@ -5,7 +5,7 @@ import os
 
 def readyData():
     # Load the CSV data
-    filenames = [f for f in os.listdir("../csv")]
+    filenames = [f for f in os.listdir("csv")]
 
     DFs = []
 
