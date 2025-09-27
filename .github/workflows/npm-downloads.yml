@@ -33,7 +33,7 @@ jobs:
         pip install pandas plotnine
 
     - name: Run Python script to update README
-      run: python plot-downloads.py
+      run: python scripts/plot-downloads.py
 
       
     - name: Commit and push changes
