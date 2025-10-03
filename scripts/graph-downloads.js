@@ -19,13 +19,13 @@ async function getRollingDownloads(pkg) {
   const startDate = new Date(endDate);
   startDate.setFullYear(startDate.getFullYear() - 10);
 
-  const oneYearAgo = new Date(endDate);
-  oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+  const oneMonthAgo = new Date(endDate);
+  oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
 
   const months = [];
   const pkgDownloads = [];
 
-  while (startDate <= oneYearAgo) {
+  while (startDate <= oneMonthAgo) {
     const periodEnd = new Date(startDate);
     periodEnd.setMonth(periodEnd.getMonth() + 1);
 
@@ -46,7 +46,7 @@ async function getRollingDownloads(pkg) {
   }
 
   // write csvConent to csv file
-  const csvPath = path.join(`csv/${pkg.replace(/^(@jspsych\/|@jspsych-contrib\/)/,"")}-data.csv`);
+  const csvPath = path.join(`csv_tests/${pkg.replace(/^(@jspsych\/|@jspsych-contrib\/)/,"")}-data.csv`);
   fs.writeFileSync(csvPath, csvContent);
   console.log('CSV file saved to', csvPath);;
 }
