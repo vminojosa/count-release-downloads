@@ -46,7 +46,7 @@ async function getRollingDownloads(pkg) {
   }
 
   // write csvConent to csv file
-  const csvPath = path.join(`csv_tests/${pkg.replace(/^(@jspsych\/|@jspsych-contrib\/)/,"")}-data.csv`);
+  const csvPath = path.join(`csv/${pkg.replace(/^(@jspsych\/|@jspsych-contrib\/)/,"")}-data.csv`);
   fs.writeFileSync(csvPath, csvContent);
   console.log('CSV file saved to', csvPath);;
 }
